@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get install -y \
 	build-essential
 RUN python -m pip install -U pip wheel && \
-    pip wheel --no-cache-dir -w ${WHEELS} numpy
+    pip wheel --no-cache-dir -w ${WHEELS} 'numpy==1.25.2'
 
 FROM scratch
 ARG WHEELS
